@@ -1,0 +1,79 @@
+public class Testcase1 extends java.lang.Object
+{
+/*Testcase1.java*/
+
+/*3*/
+    public void <init>()
+    {
+        Testcase1 r0;
+
+        r0 := @this: Testcase1;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+/*4*/
+
+        return;
+/*4*/
+    }
+
+/*6*/
+    public static void main(java.lang.String[])
+    {
+        int[] $r0;
+        int $i0, $i1, i3;
+        java.lang.String[] r2;
+
+        r2 := @parameter0: java.lang.String[];
+
+        $r0 = newarray (int)[5];
+/*7*/
+
+        $r0[0] = 1;
+/*7*/
+/*[safe lower bound][safe upper bound]*/
+
+        $r0[1] = 2;
+/*7*/
+/*[safe lower bound][safe upper bound]*/
+
+        $r0[2] = 3;
+/*7*/
+/*[safe lower bound][safe upper bound]*/
+
+        $r0[3] = 4;
+/*7*/
+/*[safe lower bound][safe upper bound]*/
+
+        $r0[4] = 5;
+/*7*/
+/*[safe lower bound][safe upper bound]*/
+
+        i3 = 0;
+/*10*/
+
+     label1:
+        $i0 = lengthof $r0;
+/*10*/
+
+        if i3 >= $i0 goto label2;
+/*10*/
+
+        $i1 = $r0[i3];
+/*11*/
+/*[safe lower bound][safe upper bound]*/
+
+        i3 = i3 + 1;
+/*10*/
+
+        goto label1;
+/*10*/
+
+     label2:
+        $r0[-2] = 10;
+/*14*/
+/*[potentially unsafe lower bound][safe upper bound]*/
+
+        return;
+/*15*/
+    }
+}

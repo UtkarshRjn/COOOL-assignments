@@ -1,0 +1,130 @@
+public class Testcase5 extends java.lang.Object
+{
+/*Testcase5.java*/
+
+/*2*/
+    public void <init>()
+    {
+        Testcase5 r0;
+
+        r0 := @this: Testcase5;
+/*r0 := @this: Testcase5 dominates r0 := @this: Testcase5*/
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+/*3*/
+/*r0 := @this: Testcase5 dominates specialinvoke r0.<java.lang.Object: void <init>()>()*/
+/*specialinvoke r0.<java.lang.Object: void <init>()>() dominates specialinvoke r0.<java.lang.Object: void <init>()>()*/
+
+        return;
+/*3*/
+/*r0 := @this: Testcase5 dominates return*/
+/*specialinvoke r0.<java.lang.Object: void <init>()>() dominates return*/
+/*return dominates return*/
+    }
+
+/*5*/
+    public static void main(java.lang.String[])
+    {
+        java.lang.String $r0, r5;
+        boolean $z0;
+        java.io.PrintStream $r1;
+        java.lang.String[] r2;
+
+        r2 := @parameter0: java.lang.String[];
+/*r2 := @parameter0: java.lang.String[] dominates r2 := @parameter0: java.lang.String[]*/
+
+        $r0 = new java.lang.String;
+/*6*/
+/*r2 := @parameter0: java.lang.String[] dominates $r0 = new java.lang.String*/
+/*$r0 = new java.lang.String dominates $r0 = new java.lang.String*/
+
+        specialinvoke $r0.<java.lang.String: void <init>()>();
+/*6*/
+/*r2 := @parameter0: java.lang.String[] dominates specialinvoke $r0.<java.lang.String: void <init>()>()*/
+/*$r0 = new java.lang.String dominates specialinvoke $r0.<java.lang.String: void <init>()>()*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates specialinvoke $r0.<java.lang.String: void <init>()>()*/
+
+        $z0 = staticinvoke <Testcase5: boolean func()>();
+/*9*/
+/*r2 := @parameter0: java.lang.String[] dominates $z0 = staticinvoke <Testcase5: boolean func()>()*/
+/*$r0 = new java.lang.String dominates $z0 = staticinvoke <Testcase5: boolean func()>()*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates $z0 = staticinvoke <Testcase5: boolean func()>()*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates $z0 = staticinvoke <Testcase5: boolean func()>()*/
+
+        if $z0 == 0 goto label1;
+/*9*/
+/*r2 := @parameter0: java.lang.String[] dominates if $z0 == 0 goto r5 = "Dog"*/
+/*$r0 = new java.lang.String dominates if $z0 == 0 goto r5 = "Dog"*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates if $z0 == 0 goto r5 = "Dog"*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates if $z0 == 0 goto r5 = "Dog"*/
+/*if $z0 == 0 goto r5 = "Dog" dominates if $z0 == 0 goto r5 = "Dog"*/
+
+        r5 = "Cat";
+/*10*/
+/*r2 := @parameter0: java.lang.String[] dominates r5 = "Cat"*/
+/*$r0 = new java.lang.String dominates r5 = "Cat"*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates r5 = "Cat"*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates r5 = "Cat"*/
+/*if $z0 == 0 goto r5 = "Dog" dominates r5 = "Cat"*/
+/*r5 = "Cat" dominates r5 = "Cat"*/
+
+        goto label2;
+/*10*/
+/*r2 := @parameter0: java.lang.String[] dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+/*$r0 = new java.lang.String dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+/*if $z0 == 0 goto r5 = "Dog" dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+/*r5 = "Cat" dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+/*goto [?= $r1 = <java.lang.System: java.io.PrintStream out>] dominates goto [?= $r1 = <java.lang.System: java.io.PrintStream out>]*/
+
+     label1:
+        r5 = "Dog";
+/*12*/
+/*r2 := @parameter0: java.lang.String[] dominates r5 = "Dog"*/
+/*$r0 = new java.lang.String dominates r5 = "Dog"*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates r5 = "Dog"*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates r5 = "Dog"*/
+/*if $z0 == 0 goto r5 = "Dog" dominates r5 = "Dog"*/
+/*r5 = "Dog" dominates r5 = "Dog"*/
+
+     label2:
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+/*15*/
+/*r2 := @parameter0: java.lang.String[] dominates $r1 = <java.lang.System: java.io.PrintStream out>*/
+/*$r0 = new java.lang.String dominates $r1 = <java.lang.System: java.io.PrintStream out>*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates $r1 = <java.lang.System: java.io.PrintStream out>*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates $r1 = <java.lang.System: java.io.PrintStream out>*/
+/*if $z0 == 0 goto r5 = "Dog" dominates $r1 = <java.lang.System: java.io.PrintStream out>*/
+/*$r1 = <java.lang.System: java.io.PrintStream out> dominates $r1 = <java.lang.System: java.io.PrintStream out>*/
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5);
+/*15*/
+/*r2 := @parameter0: java.lang.String[] dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+/*$r0 = new java.lang.String dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+/*if $z0 == 0 goto r5 = "Dog" dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+/*$r1 = <java.lang.System: java.io.PrintStream out> dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+/*virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5) dominates virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5)*/
+
+        return;
+/*16*/
+/*r2 := @parameter0: java.lang.String[] dominates return*/
+/*$r0 = new java.lang.String dominates return*/
+/*specialinvoke $r0.<java.lang.String: void <init>()>() dominates return*/
+/*$z0 = staticinvoke <Testcase5: boolean func()>() dominates return*/
+/*if $z0 == 0 goto r5 = "Dog" dominates return*/
+/*$r1 = <java.lang.System: java.io.PrintStream out> dominates return*/
+/*virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>(r5) dominates return*/
+/*return dominates return*/
+    }
+
+/*18*/
+    public static boolean func()
+    {
+        return 1;
+/*19*/
+/*return 1 dominates return 1*/
+    }
+}
