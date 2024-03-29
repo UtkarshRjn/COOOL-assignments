@@ -1,0 +1,1386 @@
+Soot started on Sat Mar 30 02:32:55 IST 2024
+-----------------------------------------------------------
+Analyzing method: main in class: Test
+InPTG for unit: r1 := @parameter0: java.lang.String[]
+OutPTG for unit: r1 := @parameter0: java.lang.String[]
+InPTG for unit: staticinvoke <Test: Node foo()>()
+-----------------------------------------------------------
+Analyzing method: foo in class: Test
+InPTG for unit: $r0 = new Node
+OutPTG for unit: $r0 = new Node
+InPTG for unit: specialinvoke $r0.<Node: void <init>()>()
+OutPTG for unit: specialinvoke $r0.<Node: void <init>()>()
+InPTG for unit: r1 = $r0
+OutPTG for unit: r1 = $r0
+InPTG for unit: $r2 = new Node
+OutPTG for unit: $r2 = new Node
+InPTG for unit: specialinvoke $r2.<Node: void <init>()>()
+OutPTG for unit: specialinvoke $r2.<Node: void <init>()>()
+InPTG for unit: r7 = $r2
+OutPTG for unit: r7 = $r2
+InPTG for unit: $r3 = new Node
+OutPTG for unit: $r3 = new Node
+InPTG for unit: specialinvoke $r3.<Node: void <init>()>()
+OutPTG for unit: specialinvoke $r3.<Node: void <init>()>()
+InPTG for unit: r7.<Node: Node f> = $r3
+OutPTG for unit: r7.<Node: Node f> = $r3
+InPTG for unit: $r4 = new Node
+OutPTG for unit: $r4 = new Node
+InPTG for unit: specialinvoke $r4.<Node: void <init>()>()
+OutPTG for unit: specialinvoke $r4.<Node: void <init>()>()
+InPTG for unit: r8 = $r4
+OutPTG for unit: r8 = $r4
+InPTG for unit: staticinvoke <Test: void bar(Node,Node)>(r1, r8)
+Arg: r1
+Arg: r8
+-----------------------------------------------------------
+Analyzing method: bar in class: Test
+InPTG for unit: r2 := @parameter0: Node
+OutPTG for unit: r2 := @parameter0: Node
+InPTG for unit: r3 := @parameter1: Node
+OutPTG for unit: r3 := @parameter1: Node
+InPTG for unit: $r0 = new Node
+OutPTG for unit: $r0 = new Node
+InPTG for unit: specialinvoke $r0.<Node: void <init>()>()
+OutPTG for unit: specialinvoke $r0.<Node: void <init>()>()
+InPTG for unit: r1 = $r0
+OutPTG for unit: r1 = $r0
+InPTG for unit: r2.<Node: Node f> = r1
+OutPTG for unit: r2.<Node: Node f> = r1
+InPTG for unit: return
+OutPTG for unit: return
+OutPTG for unit: staticinvoke <Test: void bar(Node,Node)>(r1, r8)
+InPTG for unit: r5 = r8.<Node: Node f>
+OutPTG for unit: r5 = r8.<Node: Node f>
+InPTG for unit: r6 = r1.<Node: Node f>
+OutPTG for unit: r6 = r1.<Node: Node f>
+InPTG for unit: return r1
+OutPTG for unit: return r1
+OutPTG for unit: staticinvoke <Test: Node foo()>()
+InPTG for unit: return
+OutPTG for unit: return
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+----- main-----
+Unit: r1 := @parameter0: java.lang.String[]
+Unit: staticinvoke <Test: Node foo()>()
+
+----- foo-----
+Unit: $r0 = new Node
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [$r0]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Edges:
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: specialinvoke $r0.<Node: void <init>()>()
+Unit: r1 = $r0
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Edges:
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: $r2 = new Node
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1, $r2]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Edges:
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- 16
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: specialinvoke $r2.<Node: void <init>()>()
+Unit: r7 = $r2
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1, r7]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Edges:
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: $r3 = new Node
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1, r7, $r3]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Edges:
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- 17
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: specialinvoke $r3.<Node: void <init>()>()
+Unit: r7.<Node: Node f> = $r3
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Garbage Collected Node: 16
+Garbage Collected Node: 17
+
+Edges:
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: $r4 = new Node
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1, $r4]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: specialinvoke $r4.<Node: void <init>()>()
+Unit: r8 = $r4
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1, r8]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+
+Edges:
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Unit: staticinvoke <Test: void bar(Node,Node)>(r1, r8)
+
+----- bar-----
+Unit: r2 := @parameter0: Node
+Unit: r3 := @parameter1: Node
+Unit: $r0 = new Node
+Live locals before: [$r0, r1, r2, r3]
+Live locals after: [r2, $r0]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+
+Edges:
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+
+Unit: specialinvoke $r0.<Node: void <init>()>()
+Unit: r1 = $r0
+Live locals before: [$r0, r1, r2, r3]
+Live locals after: [r2, r1]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+
+Unit: r2.<Node: Node f> = r1
+Live locals before: [$r0, r1, r2, r3]
+Live locals after: []
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Unit: return
+Live locals before: [$r0, r1, r2, r3]
+Live locals after: []
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1, r8]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Unit: r5 = r8.<Node: Node f>
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Garbage Collected Node: 18
+
+Edges:
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Unit: r6 = r1.<Node: Node f>
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: [r1]
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+- d_bar_r1
+- d_bar_$r0
+- 30
+- d_bar_r1
+- d_bar_$r0
+- 30
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Unit: return r1
+Live locals before: [$r0, r1, $r2, $r3, $r4, r5, r6, r7, r8]
+Live locals after: []
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Garbage Collected Node: 15
+Garbage Collected Node: 30
+
+Edges:
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+
+Live locals before: [r1]
+Live locals after: []
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+
+Unit: return
+Live locals before: [r1]
+Live locals after: []
+
+Edges:
+Source Node: foo_$r4, Field Key: , Connected Nodes:
+- d_foo_$r4
+- 18
+Source Node: foo_r7, Field Key: , Connected Nodes:
+- d_foo_r7
+- d_foo_$r2
+- 16
+Source Node: foo_$r3, Field Key: , Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: foo_r8, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+Source Node: foo_r5, Field Key: , Connected Nodes:
+- d_foo_r5
+Source Node: foo_r6, Field Key: , Connected Nodes:
+- d_foo_r6
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: foo_$r0, Field Key: , Connected Nodes:
+- d_foo_$r0
+- 15
+Source Node: foo_r1, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+Source Node: foo_$r2, Field Key: , Connected Nodes:
+- d_foo_$r2
+- 16
+Source Node: d_bar_r2, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: main_r1, Field Key: , Connected Nodes:
+- d_main_r1
+Source Node: d_foo_r1, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_r7, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: 15, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: 16, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: d_foo_$r2, Field Key: f, Connected Nodes:
+- d_foo_$r3
+- 17
+Source Node: bar_r3, Field Key: , Connected Nodes:
+- d_foo_r8
+- d_foo_$r4
+- 18
+- d_bar_r3
+Source Node: bar_r2, Field Key: , Connected Nodes:
+- d_foo_r1
+- d_foo_$r0
+- 15
+- d_bar_r2
+Source Node: bar_$r0, Field Key: , Connected Nodes:
+- d_bar_$r0
+- 30
+Source Node: bar_r1, Field Key: , Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+Source Node: d_foo_$r0, Field Key: f, Connected Nodes:
+- d_bar_r1
+- d_bar_$r0
+- 30
+
+Edges:
+
+Soot finished on Sat Mar 30 02:33:12 IST 2024
+Soot has run for 0 min. 16 sec.
+Test:bar 
+Test:foo 16:17 17:17 18:20 15:22 30:22 
+Test:main 
