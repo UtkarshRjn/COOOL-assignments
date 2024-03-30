@@ -1,0 +1,39 @@
+class Test1B extends Test1A
+{
+
+    void <init>()
+    {
+        Test1B r0;
+
+        r0 := @this: Test1B;
+
+        specialinvoke r0.<Test1A: void <init>()>();
+
+        return;
+    }
+
+    public void baz(Test2Node, Test2Node)
+    {
+        Test1A $r0;
+        Test2Node r2, $r3, r5;
+        Test1B r4;
+
+        r4 := @this: Test1B;
+
+        r2 := @parameter0: Test2Node;
+
+        r5 := @parameter1: Test2Node;
+
+        $r0 = new Test1A;
+
+        specialinvoke $r0.<Test1A: void <init>()>();
+
+        $r3 = new Test2Node;
+
+        specialinvoke $r3.<Test2Node: void <init>()>();
+
+        r2.<Test2Node: Test2Node f> = $r3;
+
+        return;
+    }
+}
