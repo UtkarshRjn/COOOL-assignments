@@ -14,24 +14,11 @@ import java.util.*;
 
 import soot.*;
 import soot.jimple.toolkits.callgraph.CallGraph;
-import soot.jimple.internal.JNewArrayExpr;
-import soot.jimple.internal.JAssignStmt;
-import soot.jimple.internal.JCastExpr;
-import soot.jimple.internal.JInvokeStmt;
-import soot.jimple.internal.JReturnStmt;
-import soot.jimple.internal.JNewExpr;
-import soot.jimple.internal.JInstanceFieldRef;
-import soot.jimple.internal.JimpleLocal;
-import soot.jimple.internal.JVirtualInvokeExpr;
-import soot.jimple.internal.JIdentityStmt;
 import soot.jimple.internal.*;
 import soot.jimple.*;
-import soot.jimple.internal.JArrayRef;
-import soot.jimple.StaticFieldRef;
 import soot.toolkits.graph.*;
 import soot.toolkits.scalar.BackwardFlowAnalysis;
 import soot.toolkits.scalar.FlowSet;
-import soot.Unit;
 
 class ObjectNode {
     private String line;
@@ -121,7 +108,19 @@ class PointsToGraph {
     }
 
     // Given a sourceKey (Needs to be line No or param Name) and fieldKey (edge Label f,g, ""), return all the objectNodes
-    public List<ObjectNode> getObjects(String sourceKey, String fieldKey) {
+    public List<ObjectNode> getObjects(String sourceKey, String fieldKey) { // [THINK] Remember the change made here
+        
+        if (!edges.containsKey(sourceKey)) {
+            // Create a dummy node for the missing source key
+            ObjectNode dummyNode = new ObjectNode("d_" + sourceKey);
+        
+            List<ObjectNode> dummyObjectList = new ArrayList<>();
+            dummyObjectList.add(new ObjectNode("d_" + sourceKey));
+                        
+            addEdge(sourceKey, "", dummyObjectList);
+            
+        }
+        
         return edges.get(sourceKey).get(fieldKey);
     }
 
@@ -290,11 +289,13 @@ class PointsToGraph {
 
     public void deleteEdgesFromSource(String sourceKey, List<String[]> deadEdges, List<ObjectNode> deletedNumericalNodes) {
         
+        
         if (!edges.containsKey(sourceKey)){
+            // System.out.println(sourceKey + " not found");
             return;
         }
-
         
+        // System.out.println("Deleting " + sourceKey);
         // print();
 
         // Process edges originating from the sourceKey
@@ -308,7 +309,6 @@ class PointsToGraph {
                 deadEdges.add(new String[]{sourceKey, fieldKey, node.getLine()});
             }
             
-
             // Remove edges
             fieldMap.remove(fieldKey);
             
@@ -337,6 +337,8 @@ class PointsToGraph {
             edges.remove(sourceKey);
             nodes.remove(sourceKey);
         }
+
+        // print();
     }
     
     public void deleteDummySource(List<String[]> deadEdges){
@@ -444,7 +446,7 @@ public class AnalysisTransformer extends SceneTransformer {
         return new String[]{base, field};
     }
 
-    private static void escapeArgs(List<Value> args, PointsToGraph inPTG, String methodName){
+    private static void escapeArgs(List<Value> args, PointsToGraph inPTG, String methodId){
                 
         for(Value arg : args){
             String[] rPair = extractBaseAndField(arg);
@@ -455,7 +457,7 @@ public class AnalysisTransformer extends SceneTransformer {
             if(!rField.isEmpty()){
 
                 // We assume here that lhs would only have a base and no field
-                List<ObjectNode> IntermediateObjectNodes = inPTG.getObjects(methodName + '_' + rBase, "");
+                List<ObjectNode> IntermediateObjectNodes = inPTG.getObjects(methodId + '_' + rBase, "");
 
                 for(ObjectNode intermediateObjectNode : IntermediateObjectNodes){
 
@@ -466,7 +468,7 @@ public class AnalysisTransformer extends SceneTransformer {
                 }
                 
             }else{
-                TargetObjectNodes.addAll(inPTG.getObjects(methodName + '_' + rBase, ""));
+                TargetObjectNodes.addAll(inPTG.getObjects(methodId + '_' + rBase, ""));
             }
             
             for(ObjectNode targetObjectNode : TargetObjectNodes){
@@ -477,7 +479,7 @@ public class AnalysisTransformer extends SceneTransformer {
 
     }
 
-    private void analyseStatement(Unit u, PointsToGraph inPTG, PointsToGraph outPTG, SootClass sootClass, String methodName, String CallerReturnValue){ // Removed static from here
+    private void analyseStatement(Unit u, PointsToGraph inPTG, PointsToGraph outPTG, SootClass sootClass, String methodId, String CallerReturnValue){ // Removed static from here
 
         outPTG.union(inPTG);
 
@@ -518,7 +520,7 @@ public class AnalysisTransformer extends SceneTransformer {
             if(rhs instanceof ThisRef){
             
                 // assign all node attached to r2 to escape
-                List<ObjectNode> TargetObjectNodes = inPTG.getObjects(methodName + '_' + lBase, "");
+                List<ObjectNode> TargetObjectNodes = inPTG.getObjects(methodId + '_' + lBase, "");
                 for(ObjectNode targetObjectNode : TargetObjectNodes){
                     targetObjectNode.setEscape(true);
                 }
@@ -530,7 +532,7 @@ public class AnalysisTransformer extends SceneTransformer {
                         List<ObjectNode> dummyObjectList = new ArrayList<>();
                         dummyObjectList.add(new ObjectNode("gdummy" + fieldName));
                         
-                        outPTG.addEdge("d_" + methodName + '_' +  lBase, fieldName, dummyObjectList);
+                        outPTG.addEdge("d_" + methodId + '_' +  lBase, fieldName, dummyObjectList);
                     }
                 }
 
@@ -553,9 +555,9 @@ public class AnalysisTransformer extends SceneTransformer {
             String rBase = rPair[0];
             String rField = rPair[1];
 
-            // System.out.println("LHS is " + lBase + " and the field reference is: " + lField);
-            // System.out.println("RHS is " + rBase + " and the field reference is: " + rField);
-            // System.out.println("");
+            System.out.println("LHS is " + lBase + " and the field reference is: " + lField);
+            System.out.println("RHS is " + rBase + " and the field reference is: " + rField);
+            System.out.println("");
 
             // Print the type of the right hand side
             System.out.println("Type of lhs is " + lhs.getClass().getName());
@@ -566,7 +568,7 @@ public class AnalysisTransformer extends SceneTransformer {
                 ObjectNode NewNode = new ObjectNode(String.valueOf(line));
 
                 if(!lField.isEmpty()){
-                    List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodName + '_' + lBase, "");
+                    List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodId + '_' + lBase, "");
                     
                     for(ObjectNode sourceObjectNode : SourceObjectNodes){
 
@@ -579,7 +581,7 @@ public class AnalysisTransformer extends SceneTransformer {
 
                     List<ObjectNode>  NewNodeList = new ArrayList<>();
                     NewNodeList.add(NewNode);
-                    outPTG.addEdge(methodName + '_' + lBase, "", NewNodeList);
+                    outPTG.addEdge(methodId + '_' + lBase, "", NewNodeList);
                 }
 
             }
@@ -588,7 +590,7 @@ public class AnalysisTransformer extends SceneTransformer {
                 if(!rField.isEmpty()){
 
                     // We assume here that lhs would only have a base and no field
-                    List<ObjectNode> IntermediateObjectNodes = inPTG.getObjects(methodName + '_' + rBase, "");
+                    List<ObjectNode> IntermediateObjectNodes = inPTG.getObjects(methodId + '_' + rBase, "");
                     List<ObjectNode> TargetObjectNodes = new ArrayList<>();
 
                     for(ObjectNode intermediaObjectNode : IntermediateObjectNodes){
@@ -615,20 +617,20 @@ public class AnalysisTransformer extends SceneTransformer {
                          
                     }
                     
-                    outPTG.addEdge(methodName + '_' + lBase, "", TargetObjectNodes);
+                    outPTG.addEdge(methodId + '_' + lBase, "", TargetObjectNodes);
 
                }else{
 
-                    List<ObjectNode> TargetObjectNodes = inPTG.getObjects(methodName + '_' + rBase, "");
+                    List<ObjectNode> TargetObjectNodes = inPTG.getObjects(methodId + '_' + rBase, "");
 
                     if(!lField.isEmpty()){
-                        List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodName + '_' + lBase, "");
+                        List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodId + '_' + lBase, "");
                         
                         for(ObjectNode sourceObjectNode : SourceObjectNodes){
                             outPTG.addEdge(sourceObjectNode.getLine(), lField, TargetObjectNodes);
                         }
                     }else{
-                        outPTG.addEdge(methodName + '_' + lBase, "", TargetObjectNodes);
+                        outPTG.addEdge(methodId + '_' + lBase, "", TargetObjectNodes);
                     }
 
                }    
@@ -640,17 +642,17 @@ public class AnalysisTransformer extends SceneTransformer {
 
                 List<Value> args = virtualInvokeExpr.getArgs();
 
-                escapeArgs(args, outPTG, methodName);
+                escapeArgs(args, outPTG, methodId);
 
                 // We let the lhs objects to escape [THINK HERE]
                 if(!lField.isEmpty()){
-                    List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodName + '_' + lBase, lField);
+                    List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodId + '_' + lBase, lField);
                     
                     for(ObjectNode sourceObjectNode : SourceObjectNodes){
                         sourceObjectNode.setEscape(true);
                     }
                 }else{
-                    outPTG.getNode(methodName + '_' + lBase).setEscape(true);
+                    outPTG.getNode(methodId + '_' + lBase).setEscape(true);
                 }
                 
             }else if(rhs instanceof JStaticInvokeExpr){
@@ -659,31 +661,31 @@ public class AnalysisTransformer extends SceneTransformer {
                 System.out.println("Static invoke expression is " + staticInvokeExpr);
 
                 // System.out.println("Return variable: " + lhs);
-                String returnValue = methodName + '_' + lhs.toString();
+                String returnValue = methodId + '_' + lhs.toString();
 
                 List<Value> args = staticInvokeExpr.getArgs();
 
                 List<String> argsList = new ArrayList<>();
                 for(Value arg : args){
-                    argsList.add(methodName + '_' + arg.toString());
+                    argsList.add(methodId + '_' + arg.toString());
                 }
 
                 // Get the method being invoked
                 SootMethod invokedMethod = staticInvokeExpr.getMethod();
 
-                outPTG.assign(processCFG(invokedMethod, inPTG, argsList, returnValue));
+                outPTG.assign(processCFG(invokedMethod, inPTG, argsList, String.valueOf(u.getJavaSourceStartLineNumber()), returnValue));
 
-                escapeArgs(args, outPTG, methodName);
+                escapeArgs(args, outPTG, methodId);
 
                 // We let the lhs objects to escape [THINK HERE]
                 if(!lField.isEmpty()){
-                    List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodName + '_' + lBase, lField);
+                    List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodId + '_' + lBase, lField);
                     
                     for(ObjectNode sourceObjectNode : SourceObjectNodes){
                         sourceObjectNode.setEscape(true);
                     }
                 }else{
-                    outPTG.getNode(methodName + '_' + lBase).setEscape(true);
+                    outPTG.getNode(methodId + '_' + lBase).setEscape(true);
                 }
 
             }
@@ -697,7 +699,7 @@ public class AnalysisTransformer extends SceneTransformer {
                 
             List<String> argsList = new ArrayList<>();
             for(Value arg : args){
-                argsList.add(methodName + '_' + arg.toString());
+                argsList.add(methodId + '_' + arg.toString());
             }
             
             // print args
@@ -707,38 +709,38 @@ public class AnalysisTransformer extends SceneTransformer {
             
             PointsToGraph newPTG = new PointsToGraph();
             
-            InvokeExpr invokeExpr = invokeStmt.getInvokeExpr();
+            // InvokeExpr invokeExpr = invokeStmt.getInvokeExpr();
+            // SootMethod invokedMethod = invokeExpr.getMethod();
+            // newPTG.union(processCFG(invokedMethod, inPTG, argsList, methodId + "nullret"));
 
-            // Get the method being invoked
-            SootMethod invokedMethod = invokeExpr.getMethod();
-            newPTG.union(processCFG(invokedMethod, inPTG, argsList, methodName + "nullret"));
-
-            // CallGraph cg = Scene.v().getCallGraph();
-            // Iterator<Edge> edgeIterator = cg.edgesOutOf(u);
+            Iterator<Edge> edgeIterator = cg.edgesOutOf(u);
             
-            // while (edgeIterator.hasNext()) {
-            //     Edge edge = edgeIterator.next();
-            //     SootMethod calleeMethod = edge.tgt();
+            while (edgeIterator.hasNext()) {
+                Edge edge = edgeIterator.next();
+                SootMethod calleeMethod = edge.tgt();
                        
-            //     if(calleeMethod.toString().contains("init")  ) { continue; }
+                if(calleeMethod.toString().contains("init") || calleeMethod.isJavaLibraryMethod()) { continue; }
 
-            //     System.out.println("Function called by invoking unit: " + calleeMethod);
-            //     newPTG.union(processCFG(calleeMethod, inPTG, argsList, methodName + "nullret"));
-            // }
+                System.out.println("Function called by invoking unit: " + calleeMethod);
+                newPTG.union(processCFG(calleeMethod, inPTG, argsList, String.valueOf(u.getJavaSourceStartLineNumber()) ,methodId + "_nullret"));
+            }
 
-            outPTG.assign(newPTG);
-            escapeArgs(args, outPTG, methodName); // [UPDATE] made it outPTG instead of inPTG
+            if(!newPTG.isEqual(new PointsToGraph())){
+                outPTG.assign(newPTG);
+            }
+
+            escapeArgs(args, outPTG, methodId); // [UPDATE] made it outPTG instead of inPTG
 
         }else if(u instanceof JReturnStmt){
             
             JReturnStmt returnStmt = (JReturnStmt) u;
             Value returnValue = returnStmt.getOp();
 
-            escapeArgs(List.of(returnValue), outPTG, methodName); // [UPDATE] made it outPTG instead of inPTG
+            escapeArgs(List.of(returnValue), outPTG, methodId); // [UPDATE] made it outPTG instead of inPTG
 
             if(!CallerReturnValue.isEmpty()){
                 List<ObjectNode> TargetObjectNodes = new ArrayList<>();
-                TargetObjectNodes.addAll(outPTG.getObjects(methodName + '_' + returnValue.toString(), ""));
+                TargetObjectNodes.addAll(outPTG.getObjects(methodId + '_' + returnValue.toString(), ""));
                 outPTG.addEdge(CallerReturnValue, "", TargetObjectNodes);
             }
             // System.out.println("Return variable: " + CallerReturnValue);
@@ -747,7 +749,7 @@ public class AnalysisTransformer extends SceneTransformer {
     
     } 
 
-    private void worklistAlgo(UnitGraph unitGraph, Map<Unit, PointsToGraph> InPTG, Map<Unit, PointsToGraph> OutPTG, SootClass sootClass, String methodName, String ReturnValue){
+    private void worklistAlgo(UnitGraph unitGraph, Map<Unit, PointsToGraph> InPTG, Map<Unit, PointsToGraph> OutPTG, SootClass sootClass, String methodId, String ReturnValue){
 
         List<Unit> worklist = new ArrayList<>();
 
@@ -772,7 +774,7 @@ public class AnalysisTransformer extends SceneTransformer {
             // InPTG.get(currentUnit).print();
 
             // Perform the Update based on the statement
-            analyseStatement(currentUnit, InPTG.get(currentUnit), OutPTG.get(currentUnit), sootClass, methodName, ReturnValue);
+            analyseStatement(currentUnit, InPTG.get(currentUnit), OutPTG.get(currentUnit), sootClass, methodId, ReturnValue);
 
             // System.out.println("OutPTG for unit: " + currentUnit);
             // OutPTG.get(currentUnit).print();
@@ -803,7 +805,7 @@ public class AnalysisTransformer extends SceneTransformer {
         
         // getlistofMethods(mainMethod, methods);
         
-        GarbageCollect(mainMethod, new ArrayList<>());
+        GarbageCollect(mainMethod, "0" , new ArrayList<>());
     }
 
     protected void processCFGMain(SootMethod method){ // I have removed static here
@@ -814,9 +816,10 @@ public class AnalysisTransformer extends SceneTransformer {
         SootClass testClass = Scene.v().getSootClass(className);
         // Bring class name from the body
         String methodName = method.getName();
+        String methodId = "0_" + methodName;
 
         System.out.println("-----------------------------------------------------------");
-        System.out.println("Analyzing method: " + methodName + " in class: " + className);
+        System.out.println("Analyzing method: " + methodId + " in class: " + className);
 
         Body body = method.getActiveBody();  
 
@@ -853,7 +856,7 @@ public class AnalysisTransformer extends SceneTransformer {
             String localName = local.getName();
 
             // Create a dummy object
-            ObjectNode dummyObject = new ObjectNode("d_" + methodName + "_" + localName);
+            ObjectNode dummyObject = new ObjectNode("d_" + methodId + "_" + localName);
 
             // Check if this local variable is a parameter, if so set the escape to true
             if(body.getParameterLocals().contains(local)){
@@ -865,13 +868,13 @@ public class AnalysisTransformer extends SceneTransformer {
                 List<ObjectNode> dummyObjectList = new ArrayList<>();
                 dummyObjectList.add(dummyObject);
 
-                InPTG.get(unit).addEdge(methodName + "_" + localName, "", dummyObjectList);
+                InPTG.get(unit).addEdge(methodId + "_" + localName, "", dummyObjectList);
             }
 
         }
 
         // Perform worklist algorithm
-        worklistAlgo(unitGraph, InPTG, OutPTG, testClass, methodName, null);
+        worklistAlgo(unitGraph, InPTG, OutPTG, testClass, methodId, null);
 
         // Peform dfs on the final OUT graph         
         PointsToGraph finalOutPTG = OutPTG.get(unitGraph.getTails().get(0));
@@ -879,9 +882,9 @@ public class AnalysisTransformer extends SceneTransformer {
 
     }
 
-    protected PointsToGraph processCFG(SootMethod method, PointsToGraph inPTGCaller, List<String> args, String ReturnValue){
+    protected PointsToGraph processCFG(SootMethod method, PointsToGraph inPTGCaller, List<String> args, String CallerLineNumber , String ReturnValue){
 
-        if(method.toString().contains("init")  ) { return inPTGCaller; }
+        if(method.toString().contains("init") || method.isJavaLibraryMethod()) { return inPTGCaller; }
 
         // Get the class name from body
         String className = method.getDeclaringClass().getName();
@@ -889,9 +892,10 @@ public class AnalysisTransformer extends SceneTransformer {
         SootClass testClass = Scene.v().getSootClass(className);
         // Bring class name from the body
         String methodName = method.getName();
+        String methodId = CallerLineNumber + "_" + methodName;
 
         System.out.println("-----------------------------------------------------------");
-        System.out.println("Analyzing method: " + methodName + " in class: " + className);
+        System.out.println("Analyzing method: " + methodId + " in class: " + className);
 
         Body body = method.getActiveBody();  
 
@@ -928,7 +932,7 @@ public class AnalysisTransformer extends SceneTransformer {
             String localName = local.getName();
 
             // Create a dummy object
-            ObjectNode dummyObject = new ObjectNode("d_" + methodName + "_" + localName);
+            ObjectNode dummyObject = new ObjectNode("d_" + methodId + "_" + localName);
 
             // Check if this local variable is a parameter, if so set the escape to true
             if(body.getParameterLocals().contains(local)){                
@@ -944,7 +948,7 @@ public class AnalysisTransformer extends SceneTransformer {
                 TargetObjectNodes.add(dummyObject);
 
                 for(Unit unit : unitGraph){
-                    InPTG.get(unit).addEdge(methodName + '_' + localName, "", TargetObjectNodes);
+                    InPTG.get(unit).addEdge(methodId + '_' + localName, "", TargetObjectNodes);
                 }
 
             }else{
@@ -954,7 +958,7 @@ public class AnalysisTransformer extends SceneTransformer {
                     List<ObjectNode> dummyObjectList = new ArrayList<>();
                     dummyObjectList.add(dummyObject);
     
-                    InPTG.get(unit).addEdge(methodName + "_" + localName, "", dummyObjectList);
+                    InPTG.get(unit).addEdge(methodId + "_" + localName, "", dummyObjectList);
                 }
             }
 
@@ -962,7 +966,7 @@ public class AnalysisTransformer extends SceneTransformer {
         }
 
         // Perform worklist algorithm
-        worklistAlgo(unitGraph, InPTG, OutPTG, testClass, methodName, ReturnValue);
+        worklistAlgo(unitGraph, InPTG, OutPTG, testClass, methodId, ReturnValue);
 
         // Peform dfs on the final OUT graph         
         PointsToGraph finalOutPTG = OutPTG.get(unitGraph.getTails().get(0));
@@ -972,8 +976,8 @@ public class AnalysisTransformer extends SceneTransformer {
 
     }
 
-    protected void GarbageCollect(SootMethod method, List<String[]> deadEdges) {
-        if(method.toString().contains("init")  ) { return; }
+    protected void GarbageCollect(SootMethod method, String CallerLineNumber, List<String[]> deadEdges) {
+        if(method.toString().contains("init") || method.isJavaLibraryMethod()) { return; }
         Body body = method.getActiveBody();
 
         String className = method.getDeclaringClass().getName();
@@ -990,7 +994,7 @@ public class AnalysisTransformer extends SceneTransformer {
 
         // Iterate over the units
         for (Unit u : units) {
-            System.out.println("Unit: " + u);
+            System.out.println("Unit " + u.getJavaSourceStartLineNumber() + ": " + u);
             // List<Local> before = liveLocals.getLiveLocalsBefore(u);
             
             if(u instanceof JIdentityStmt){
@@ -1009,7 +1013,7 @@ public class AnalysisTransformer extends SceneTransformer {
                     // Get the method being invoked
                     SootMethod invokedMethod = staticInvokeExpr.getMethod();
                     
-                    GarbageCollect(invokedMethod, deadEdges);
+                    GarbageCollect(invokedMethod, String.valueOf(u.getJavaSourceStartLineNumber()) , deadEdges);
 
                 }else if(rhs instanceof JVirtualInvokeExpr){
                     
@@ -1018,30 +1022,43 @@ public class AnalysisTransformer extends SceneTransformer {
                     // Get the method being invoked
                     SootMethod invokedMethod = virtualInvokeExpr.getMethod();
 
-                    GarbageCollect(invokedMethod, deadEdges);
+                    GarbageCollect(invokedMethod, String.valueOf(u.getJavaSourceStartLineNumber()), deadEdges);
 
                 }            
 
             }else if(u instanceof InvokeStmt){
                 InvokeStmt invokeStmt = (InvokeStmt) u;
+                
                 InvokeExpr invokeExpr = invokeStmt.getInvokeExpr();
                 SootMethod invokedMethod = invokeExpr.getMethod();
-                if(invokedMethod.toString().contains("init")  ) { continue; }
+                if(invokedMethod.toString().contains("init") || invokedMethod.isJavaLibraryMethod()) { continue; }
                 
-                // CallGraph cg = Scene.v().getCallGraph();
-                // Iterator<Edge> edgeIterator = cg.edgesOutOf(u);
+                // GarbageCollect(invokedMethod, deadEdges);
                 
-                // while (edgeIterator.hasNext()) {
-                //     Edge edge = edgeIterator.next();
-                //     SootMethod calleeMethod = edge.tgt();
-                        
-                //     if(calleeMethod.toString().contains("init")  ) { continue; }
+                cg = Scene.v().getCallGraph();
+                Iterator<Edge> edgeIterator = cg.edgesOutOf(u);
+                
+                // Create a copy of deadEdges
+                List<String[]> deadEdgesCopy = new ArrayList<>(deadEdges);
 
-                //     System.out.println("Garbage collecting the invoked function: " + calleeMethod);
-                //     GarbageCollect(calleeMethod, deadEdges);
-                // }
+                while (edgeIterator.hasNext()) {
+                    // Create a fresh copy of deadEdges for each iteration
+                    List<String[]> currentDeadEdgesCopy = new ArrayList<>(deadEdgesCopy);
+                    
+                    Edge edge = edgeIterator.next();
+                    SootMethod calleeMethod = edge.tgt();
+                    
+                    // if(calleeMethod.toString().contains("init") || calleeMethod.isJavaLibraryMethod()) { continue; }
 
-                GarbageCollect(invokedMethod, deadEdges);
+                    System.out.println("Garbage collecting the invoked function: " + calleeMethod);
+                    GarbageCollect(calleeMethod, String.valueOf(u.getJavaSourceStartLineNumber()), currentDeadEdgesCopy);
+                    
+                    // Update deadEdges by taking the union of the current copy
+                    deadEdges.addAll(currentDeadEdgesCopy);
+                }
+
+                // Update deadEdges by taking the union of all changes
+                deadEdges.addAll(deadEdgesCopy);
 
             }
 
@@ -1064,15 +1081,26 @@ public class AnalysisTransformer extends SceneTransformer {
 
             // [THINK] delete all nodes that have dummy source
             ptg.deleteDummySource(deadEdges);
+            
+            // ptg.print();
+            
+            // print deadEdges
+            // for(String[] deadEdge : deadEdges){
+            //     System.out.println(deadEdge[0] + "," + deadEdge[1] + "," + deadEdge[2]);
+            // }
+
             deadEdges.forEach(edge -> ptg.deleteEdge(edge[0], edge[1], edge[2]));
             
+            // ptg.print();
+
             // Find the livelocals that is not in the after list
             for (Local local : before) {
                 if (!after.contains(local)) {
                     // System.out.println("Dead local: " + local);
                     String localName = local.getName();
                     String methodName = method.getName();
-                    String sourceKey = methodName + "_" + localName;
+                    String methodId = CallerLineNumber + "_" + methodName;
+                    String sourceKey = methodId + "_" + localName;
                     // Remove all the edges that has the sourceKey and correspondingly all nodes that have inNodeDegree = 0, use dfs
                     
                     // print sourceKey and deadEdges
@@ -1112,7 +1140,7 @@ public class AnalysisTransformer extends SceneTransformer {
                 }
             }
 
-            // ptg.print();
+            ptg.print();
 
             System.out.println();
 

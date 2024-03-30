@@ -1,6 +1,5 @@
 public class Test extends java.lang.Object
 {
-    public static Test2Node global;
 
     public void <init>()
     {
@@ -15,30 +14,16 @@ public class Test extends java.lang.Object
 
     public static void main(java.lang.String[])
     {
-        Test2Node $r0, $r2;
-        Test1A $r4;
-        Test1B $r6;
-        java.lang.String[] r8;
+        Test1A $r0;
+        java.lang.String[] r2;
 
-        r8 := @parameter0: java.lang.String[];
+        r2 := @parameter0: java.lang.String[];
 
-        $r0 = new Test2Node;
+        $r0 = new Test1A;
 
-        specialinvoke $r0.<Test2Node: void <init>()>();
+        specialinvoke $r0.<Test1A: void <init>()>();
 
-        $r2 = new Test2Node;
-
-        specialinvoke $r2.<Test2Node: void <init>()>();
-
-        $r4 = new Test1A;
-
-        specialinvoke $r4.<Test1A: void <init>()>();
-
-        $r6 = new Test1B;
-
-        specialinvoke $r6.<Test1B: void <init>()>();
-
-        staticinvoke <Test: void bar(Test2Node,Test2Node)>($r0, $r2);
+        virtualinvoke $r0.<Test1A: void baz()>();
 
         return;
     }
@@ -72,10 +57,6 @@ public class Test extends java.lang.Object
         $r0.<Test2Node: Test2Node f> = $r8;
 
         staticinvoke <Test: void bar(Test2Node,Test2Node)>($r0, $r2);
-
-        virtualinvoke $r4.<Test1A: void baz(Test2Node,Test2Node)>($r0, $r2);
-
-        virtualinvoke $r6.<Test1A: void baz(Test2Node,Test2Node)>($r0, $r2);
 
         return $r0;
     }
