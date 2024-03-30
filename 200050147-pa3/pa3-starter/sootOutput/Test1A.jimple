@@ -12,11 +12,22 @@ class Test1A extends java.lang.Object
         return;
     }
 
-    public void baz()
+    public void baz(Test2Node, Test2Node)
     {
-        Test1A r0;
+        Test2Node r0, $r1, r3;
+        Test1A r2;
 
-        r0 := @this: Test1A;
+        r2 := @this: Test1A;
+
+        r3 := @parameter0: Test2Node;
+
+        r0 := @parameter1: Test2Node;
+
+        $r1 = new Test2Node;
+
+        specialinvoke $r1.<Test2Node: void <init>()>();
+
+        r0.<Test2Node: Test2Node f> = $r1;
 
         return;
     }
