@@ -283,8 +283,15 @@ class PointsToGraph {
     }
 
     private boolean isNumerical(String line) {
-        // Assuming a simple check if the line consists only of digits
-        return line.matches("\\d+");
+        // Get the substring after the last underscore
+        int lastIndex = line.lastIndexOf('_');
+        if (lastIndex != -1 && lastIndex < line.length() - 1) {
+            String substring = line.substring(lastIndex + 1);
+            
+            // Check if the substring consists only of digits
+            return substring.matches("\\d+");
+        }
+        return false; // Return false if no underscore found or if the substring is empty
     }
 
     public void deleteEdgesFromSource(String sourceKey, Set<String[]> deadEdges, List<ObjectNode> deletedNumericalNodes) {
@@ -567,7 +574,7 @@ public class AnalysisTransformer extends SceneTransformer {
 
             if (rhs instanceof JNewExpr || rhs instanceof JNewArrayExpr) {
                 int line = u.getJavaSourceStartLineNumber();
-                ObjectNode NewNode = new ObjectNode(String.valueOf(line));
+                ObjectNode NewNode = new ObjectNode(methodId + "_" +String.valueOf(line));
 
                 if(!lField.isEmpty()){
                     List<ObjectNode>  SourceObjectNodes = inPTG.getObjects(methodId + '_' + lBase, "");
@@ -1159,7 +1166,9 @@ public class AnalysisTransformer extends SceneTransformer {
                     List<Map.Entry<String, Integer>> GCedObjectsList = new ArrayList<>();
                     for (ObjectNode node : GCed_nodes) {
                         // Assuming node.getLine() returns a string and line is an integer
-                        GCedObjectsList.add(new AbstractMap.SimpleEntry<>(node.getLine(), line));
+                        String NodeString = node.getLine();
+                        String NodeNum = NodeString.substring(NodeString.lastIndexOf("_") + 1); // Extract the line number from the node
+                        GCedObjectsList.add(new AbstractMap.SimpleEntry<>(NodeNum, line));
                     }
 
                     // System.out.println("GCed Objects: " + GCedObjectsList);

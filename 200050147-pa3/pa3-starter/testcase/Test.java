@@ -13,7 +13,7 @@ class Node /* extends Base */ {
 public class Test {
 	// public static Node global;
 	public static void main(String[] args) {
-		Node ret = foo();
+		Node ret = foo();	
 	}
 	public static Node foo(){
 		Node x = new Node();
