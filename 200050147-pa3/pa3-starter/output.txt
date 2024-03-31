@@ -1,24 +1,24 @@
-Soot started on Sun Mar 31 20:22:57 IST 2024
+Soot started on Sun Mar 31 20:56:36 IST 2024
 -----------------------------------------------------------
 Analyzing method: 0_main in class: Test
 -----------------------------------------------------------
-Analyzing method: 16_foo in class: Test
+Analyzing method: 0_main_16_foo in class: Test
 -----------------------------------------------------------
-Analyzing method: 23_bar in class: Test
+Analyzing method: 0_main_16_foo_23_bar in class: Test
 -----------------------------------------------------------
-Analyzing method: 41_baz in class: Test
+Analyzing method: 0_main_16_foo_23_bar_41_baz in class: Test
 -----------------------------------------------------------
-Analyzing method: 52_f1 in class: Test
+Analyzing method: 0_main_16_foo_23_bar_41_baz_52_f1 in class: Test
 -----------------------------------------------------------
-Analyzing method: 43_baz in class: Test
+Analyzing method: 0_main_16_foo_23_bar_43_baz in class: Test
 -----------------------------------------------------------
-Analyzing method: 52_f1 in class: Test
+Analyzing method: 0_main_16_foo_23_bar_43_baz_52_f1 in class: Test
 -----------------------------------------------------------
-Analyzing method: 44_f2 in class: Test
+Analyzing method: 0_main_16_foo_23_bar_44_f2 in class: Test
 -----------------------------------------------------------
-Analyzing method: 45_f2 in class: Test
+Analyzing method: 0_main_16_foo_23_bar_45_f2 in class: Test
 -----------------------------------------------------------
-Analyzing method: 34_goo in class: Node
+Analyzing method: 0_main_16_foo_34_goo in class: Node
 
 ----- main-----
 Unit -1: r1 := @parameter0: java.lang.String[]
@@ -31,63 +31,365 @@ r1 := @parameter0: java.lang.String[]
 ----- foo-----
 Unit 19: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
+SourceKey: 0_main_16_foo_r1
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 19: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_r1
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 19: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 20: $r2 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_$r2, Field Key: , Connected Nodes:
+- 20
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 20: specialinvoke $r2.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r2 = new Node
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_$r2, Field Key: , Connected Nodes:
+- 20
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 20: r8 = $r2
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r2.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r2
+- 20
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 21: $r3 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r8 = $r2
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r2
+- 20
+Source Node: 0_main_16_foo_$r3, Field Key: , Connected Nodes:
+- 21
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 21: specialinvoke $r3.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r3 = new Node
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r2
+- 20
+Source Node: 0_main_16_foo_$r3, Field Key: , Connected Nodes:
+- 21
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 21: r8.<Node: Node f> = $r3
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r3.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
 Garbage Collected Node: 20
 Garbage Collected Node: 21
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 22: $r4 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r8.<Node: Node f> = $r3
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_$r4, Field Key: , Connected Nodes:
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 22: specialinvoke $r4.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r4 = new Node
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_$r4, Field Key: , Connected Nodes:
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 22: r9 = $r4
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r4.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 23: staticinvoke <Test: void bar(Node,Node)>(r1, r9)
 Type of u is soot.jimple.internal.JInvokeStmt
@@ -105,21 +407,143 @@ Unit 39: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r5 := @parameter1: Node
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r1
+- d_0_main_16_foo_$r0
+- 19
+- d_0_main_16_foo_23_bar_r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 39: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r1
+- d_0_main_16_foo_$r0
+- 19
+- d_0_main_16_foo_23_bar_r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 39: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r1
+- d_0_main_16_foo_$r0
+- 19
+- d_0_main_16_foo_23_bar_r2
+Source Node: 0_main_16_foo_23_bar_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 40: r2.<Node: Node f> = r1
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 41: r7 = staticinvoke <Test: Node baz()>()
 Type of u is soot.jimple.internal.JAssignStmt
@@ -129,46 +553,698 @@ r2.<Node: Node f> = r1
 ----- baz-----
 Unit 49: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
+SourceKey: 0_main_16_foo_23_bar_41_baz_r1
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_41_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 49: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_41_baz_r1
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_41_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 49: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 50: $r2 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 50: specialinvoke $r2.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r2 = new Node
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 50: r1.<Node: Node f> = $r2
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r2.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 51: $r3 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r1.<Node: Node f> = $r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 51: specialinvoke $r3.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r3 = new Node
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 51: r5 = $r3
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r3.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r5
+- d_0_main_16_foo_23_bar_41_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_41_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 52: r6 = staticinvoke <Test: Node f1(Node)>(r5)
 Type of u is soot.jimple.internal.JAssignStmt
@@ -182,61 +1258,905 @@ Unit 58: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r2 := @parameter0: Node
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r1
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 58: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r1
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_16_foo_23_bar_41_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_52_f1_$r0
+- 58
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 58: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 59: return r1
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r1
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_52_f1_nullret
 
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 53: $r4 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r6 = staticinvoke <Test: Node f1(Node)>(r5)
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+- 53
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 53: specialinvoke $r4.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r4 = new Node
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+- 53
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 53: r6.<Node: Node f> = $r4
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r4.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+- 53
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+- d_0_main_16_foo_23_bar_43_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 54: return r1
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 r6.<Node: Node f> = $r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_41_baz_r1
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_41_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_41_baz_r5
+SourceKey: 0_main_16_foo_23_bar_41_baz_r6
+SourceKey: 0_main_16_foo_23_bar_41_baz_nullret
 
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r4
+- 53
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r6
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+- d_0_main_16_foo_23_bar_$r3
+- 42
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+- d_0_main_16_foo_23_bar_43_baz_$r4
+Source Node: 0_main_16_foo_23_bar_nullret, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r5
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r2
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 42: $r3 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r7 = staticinvoke <Test: Node baz()>()
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 42: specialinvoke $r3.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r3 = new Node
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r7, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_r1
+- d_0_main_16_foo_23_bar_41_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r2
+- 50
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r3, Field Key: , Connected Nodes:
+- 42
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 42: r7.<Node: Node f> = $r3
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r3.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
 Garbage Collected Node: 49
 Garbage Collected Node: 50
 Garbage Collected Node: 42
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 43: staticinvoke <Test: Node baz()>()
 Type of u is soot.jimple.internal.JInvokeStmt
@@ -246,46 +2166,367 @@ r7.<Node: Node f> = $r3
 ----- baz-----
 Unit 49: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
+SourceKey: 0_main_16_foo_23_bar_43_baz_r1
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 49: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_43_baz_r1
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 49: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 50: $r2 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- 50
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 50: specialinvoke $r2.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r2 = new Node
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r2, Field Key: , Connected Nodes:
+- 50
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 50: r1.<Node: Node f> = $r2
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r2.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+- 50
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 51: $r3 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r1.<Node: Node f> = $r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- 51
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 51: specialinvoke $r3.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r3 = new Node
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_$r3, Field Key: , Connected Nodes:
+- 51
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 51: r5 = $r3
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r3.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 52: r6 = staticinvoke <Test: Node f1(Node)>(r5)
 Type of u is soot.jimple.internal.JAssignStmt
@@ -299,48 +2540,418 @@ Unit 58: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r2 := @parameter0: Node
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r1
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 58: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r1
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 58: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_43_baz_52_f1_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 59: return r1
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r1
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_52_f1_nullret
 
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r3
+- 51
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
 Garbage Collected Node: 51
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 53: $r4 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r6 = staticinvoke <Test: Node f1(Node)>(r5)
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 53: specialinvoke $r4.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r4 = new Node
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_43_baz_$r4, Field Key: , Connected Nodes:
+- 53
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_23_bar_43_baz_r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_52_f1_r1
+- d_0_main_16_foo_23_bar_43_baz_52_f1_$r0
+- 58
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 58, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_41_baz_$r4
+- 53
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 53: r6.<Node: Node f> = $r4
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r4.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
 Garbage Collected Node: 58
 Garbage Collected Node: 53
 Garbage Collected Node: 53
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_43_baz_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 54: return r1
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 r6.<Node: Node f> = $r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r0
+SourceKey: 0_main_16_foo_23_bar_43_baz_r1
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r2
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r3
+SourceKey: 0_main_16_foo_23_bar_43_baz_$r4
+SourceKey: 0_main_16_foo_23_bar_43_baz_r5
+SourceKey: 0_main_16_foo_23_bar_43_baz_r6
+SourceKey: 0_main_16_foo_23_bar_43_baz_nullret
 
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 49, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_$r2
+Source Node: 0_main_16_foo_23_bar_nullret, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_43_baz_r1
+- d_0_main_16_foo_23_bar_43_baz_$r0
+- 49
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
 Garbage Collected Node: 49
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 44: r8 = staticinvoke <Test: Node f2(Node)>(r5)
 Type of u is soot.jimple.internal.JAssignStmt
@@ -354,22 +2965,233 @@ Unit 63: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r2 := @parameter0: Node
+SourceKey: 0_main_16_foo_23_bar_44_f2_r1
+SourceKey: 0_main_16_foo_23_bar_44_f2_r2
+SourceKey: 0_main_16_foo_23_bar_44_f2_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_44_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+Source Node: 0_main_16_foo_23_bar_45_f2_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+- d_0_main_16_foo_23_bar_45_f2_r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 63: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_44_f2_r1
+SourceKey: 0_main_16_foo_23_bar_44_f2_r2
+SourceKey: 0_main_16_foo_23_bar_44_f2_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_44_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+Source Node: 0_main_16_foo_23_bar_45_f2_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+- d_0_main_16_foo_23_bar_45_f2_r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 63: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_44_f2_$r0
+SourceKey: 0_main_16_foo_23_bar_44_f2_r2
+SourceKey: 0_main_16_foo_23_bar_44_f2_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_45_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+- d_0_main_16_foo_23_bar_45_f2_r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 64: return r1
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_44_f2_$r0
+SourceKey: 0_main_16_foo_23_bar_44_f2_r1
+SourceKey: 0_main_16_foo_23_bar_44_f2_r2
+SourceKey: 0_main_16_foo_23_bar_44_f2_nullret
 
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_45_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_23_bar_45_f2_r2, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+- d_0_main_16_foo_23_bar_45_f2_r2
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 45: $r6 = staticinvoke <Test: Node f2(Node)>(r5)
 Type of u is soot.jimple.internal.JAssignStmt
@@ -383,110 +3205,870 @@ Unit 63: $r0 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r2 := @parameter0: Node
+SourceKey: 0_main_16_foo_23_bar_45_f2_r1
+SourceKey: 0_main_16_foo_23_bar_45_f2_r2
+SourceKey: 0_main_16_foo_23_bar_45_f2_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_45_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 63: specialinvoke $r0.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r0 = new Node
+SourceKey: 0_main_16_foo_23_bar_45_f2_r1
+SourceKey: 0_main_16_foo_23_bar_45_f2_r2
+SourceKey: 0_main_16_foo_23_bar_45_f2_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_45_f2_$r0, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 63: r1 = $r0
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r0.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_23_bar_45_f2_$r0
+SourceKey: 0_main_16_foo_23_bar_45_f2_r2
+SourceKey: 0_main_16_foo_23_bar_45_f2_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_23_bar_45_f2_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 64: return r1
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 r1 = $r0
+SourceKey: 0_main_16_foo_23_bar_45_f2_$r0
+SourceKey: 0_main_16_foo_23_bar_45_f2_r1
+SourceKey: 0_main_16_foo_23_bar_45_f2_r2
+SourceKey: 0_main_16_foo_23_bar_45_f2_nullret
 
+Edges:
+Source Node: 0_main_16_foo_23_bar_r5, Field Key: , Connected Nodes:
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+- d_0_main_16_foo_23_bar_r5
+- d_0_main_16_foo_23_bar_44_f2_r2
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_r5
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 0_main_16_foo_23_bar_r8, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_44_f2_r1
+- d_0_main_16_foo_23_bar_44_f2_$r0
+- 63
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_23_bar_$r6, Field Key: , Connected Nodes:
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 45: r8.<Node: Node f> = $r6
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 $r6 = staticinvoke <Test: Node f2(Node)>(r5)
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_r5
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 46: return
 Type of u is soot.jimple.internal.JReturnVoidStmt
 Predecessors of the unit: 
 r8.<Node: Node f> = $r6
+SourceKey: 0_main_16_foo_23_bar_$r0
+SourceKey: 0_main_16_foo_23_bar_r1
+SourceKey: 0_main_16_foo_23_bar_r2
+SourceKey: 0_main_16_foo_23_bar_$r3
+SourceKey: 0_main_16_foo_23_bar_r5
+SourceKey: 0_main_16_foo_23_bar_$r6
+SourceKey: 0_main_16_foo_23_bar_r7
+SourceKey: 0_main_16_foo_23_bar_r8
+SourceKey: 0_main_16_foo_23_bar_nullret
 
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
+
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 25: $r5 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 staticinvoke <Test: void bar(Node,Node)>(r1, r9)
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_$r5, Field Key: , Connected Nodes:
+- 25
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 25: specialinvoke $r5.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r5 = new Node
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_$r5, Field Key: , Connected Nodes:
+- 25
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 25: r10 = $r5
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r5.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r10, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r5
+- 25
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 26: if r9 == null goto r13 = r10.<Node: Node f>
 Type of u is soot.jimple.internal.JIfStmt
 Predecessors of the unit: 
 r10 = $r5
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r10, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r5
+- 25
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 27: r11 = r10.<Node: Node f>
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 if r9 == null goto r13 = r10.<Node: Node f>
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
 Garbage Collected Node: 25
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 28: $r7 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r11 = r10.<Node: Node f>
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_$r7, Field Key: , Connected Nodes:
+- 28
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 28: specialinvoke $r7.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r7 = new Node
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_$r7, Field Key: , Connected Nodes:
+- 28
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 28: r12 = $r7
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r7.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r12, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r7
+- 28
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 29: goto [?= r14 = r1.<Node: Node f>]
 Type of u is soot.jimple.internal.JGotoStmt
 Predecessors of the unit: 
 r12 = $r7
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r12, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r7
+- 28
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 30: r13 = r10.<Node: Node f>
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 if r9 == null goto r13 = r10.<Node: Node f>
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
 Garbage Collected Node: 25
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 31: $r6 = new Node
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 r13 = r10.<Node: Node f>
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_$r6, Field Key: , Connected Nodes:
+- 31
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 31: specialinvoke $r6.<Node: void <init>()>()
 Type of u is soot.jimple.internal.JInvokeStmt
 Predecessors of the unit: 
 $r6 = new Node
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 0_main_16_foo_$r6, Field Key: , Connected Nodes:
+- 31
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 31: r12 = $r6
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 specialinvoke $r6.<Node: void <init>()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 19, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_r1
+- d_0_main_16_foo_23_bar_$r0
+- 39
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r12, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r6
+- 31
+Source Node: 0_main_16_foo_r1, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r0
+- 19
 
 Unit 33: r14 = r1.<Node: Node f>
 Type of u is soot.jimple.internal.JAssignStmt
 Predecessors of the unit: 
 goto [?= r14 = r1.<Node: Node f>]
 r12 = $r6
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_r1
 Garbage Collected Node: 19
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
 Garbage Collected Node: 39
 Garbage Collected Node: 39
 Garbage Collected Node: 39
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r12, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r7
+- 28
+- d_0_main_16_foo_$r6
+- 31
 
 Unit 34: virtualinvoke r12.<Node: void goo()>()
 Type of u is soot.jimple.internal.JInvokeStmt
@@ -500,23 +4082,123 @@ Unit 10: return
 Type of u is soot.jimple.internal.JReturnVoidStmt
 Predecessors of the unit: 
 r0 := @this: Node
+SourceKey: 0_main_16_foo_34_goo_r0
+SourceKey: 0_main_16_foo_34_goo_nullret
 
+Edges:
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+Source Node: 0_main_16_foo_r12, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r7
+- 28
+- d_0_main_16_foo_$r6
+- 31
+
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_r1
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
 Garbage Collected Node: 28
 Garbage Collected Node: 31
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
+
+Edges:
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_16_foo_r9, Field Key: , Connected Nodes:
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
 
 Unit 35: return r9
 Type of u is soot.jimple.internal.JReturnStmt
 Predecessors of the unit: 
 virtualinvoke r12.<Node: void goo()>()
+SourceKey: 0_main_16_foo_$r0
+SourceKey: 0_main_16_foo_r1
+SourceKey: 0_main_16_foo_$r2
+SourceKey: 0_main_16_foo_$r3
+SourceKey: 0_main_16_foo_$r4
+SourceKey: 0_main_16_foo_$r5
+SourceKey: 0_main_16_foo_$r6
+SourceKey: 0_main_16_foo_$r7
+SourceKey: 0_main_16_foo_r8
+SourceKey: 0_main_16_foo_r9
+SourceKey: 0_main_16_foo_r10
+SourceKey: 0_main_16_foo_r11
+SourceKey: 0_main_16_foo_r12
+SourceKey: 0_main_16_foo_r13
+SourceKey: 0_main_16_foo_r14
+SourceKey: 0_main_16_foo_nullret
 
+Edges:
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+Source Node: 0_main_r0, Field Key: , Connected Nodes:
+- d_0_main_r0
+- d_0_main_16_foo_r9
+- d_0_main_16_foo_$r4
+- 22
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_r1
+
+SourceKey: 0_main_r0
 Garbage Collected Node: 22
+SourceKey: 0_main_r1
+SourceKey: 0_main_nullret
+
+Edges:
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
 
 Unit 17: return
 Type of u is soot.jimple.internal.JReturnVoidStmt
 Predecessors of the unit: 
 r0 = staticinvoke <Test: Node foo()>()
+SourceKey: 0_main_r0
+SourceKey: 0_main_r1
+SourceKey: 0_main_nullret
 
-Soot finished on Sun Mar 31 20:23:12 IST 2024
+Edges:
+Source Node: 63, Field Key: f, Connected Nodes:
+- d_0_main_16_foo_23_bar_$r6
+- d_0_main_16_foo_23_bar_45_f2_r1
+- d_0_main_16_foo_23_bar_45_f2_$r0
+- 63
+
+Soot finished on Sun Mar 31 20:56:51 IST 2024
 Soot has run for 0 min. 15 sec.
 Node:goo 
 Test:bar 42:42 49:43 50:42 
