@@ -287,7 +287,7 @@ class PointsToGraph {
         return line.matches("\\d+");
     }
 
-    public void deleteEdgesFromSource(String sourceKey, List<String[]> deadEdges, List<ObjectNode> deletedNumericalNodes) {
+    public void deleteEdgesFromSource(String sourceKey, Set<String[]> deadEdges, List<ObjectNode> deletedNumericalNodes) {
         
         
         if (!edges.containsKey(sourceKey)){
@@ -341,12 +341,12 @@ class PointsToGraph {
         // print();
     }
     
-    public void deleteDummySource(List<String[]> deadEdges){
+    public void deleteDummySource(Set<String[]> deadEdges){
 
         // Iderate over a copy of the edges map to avoid concurrent modification exception
         for (String sourceKey : new HashMap<>(edges).keySet()) {
             if (sourceKey.contains("d_")) {
-                System.out.println(sourceKey);
+                // System.out.println(sourceKey);
                 deleteEdgesFromSource(sourceKey, deadEdges, new ArrayList<>());                
             }
         }
@@ -407,6 +407,7 @@ public class AnalysisTransformer extends SceneTransformer {
     static CallGraph cg;
 
     private Map<String, List<Map.Entry<String, Integer>>> GCedObjects = new HashMap<>();
+    private Map<Unit, Set<String[]>> DeadEdgesListMap = new HashMap<>();
 
     // Initalize all INs and OUTs
     Map<Unit, PointsToGraph> InPTG = new HashMap<>();
@@ -804,7 +805,7 @@ public class AnalysisTransformer extends SceneTransformer {
         
         processCFGMain(mainMethod);
                 
-        GarbageCollect(mainMethod, "0" , new ArrayList<>());
+        GarbageCollect(mainMethod, "0" , new HashSet<>());
     }
 
     protected void processCFGMain(SootMethod method){ // I have removed static here
@@ -975,7 +976,7 @@ public class AnalysisTransformer extends SceneTransformer {
 
     }
 
-    protected void GarbageCollect(SootMethod method, String CallerLineNumber, List<String[]> deadEdges) {
+    protected void GarbageCollect(SootMethod method, String CallerLineNumber, Set<String[]> deadEdgesArg) {
         
         if(method.isConstructor() || method.isJavaLibraryMethod()) { return; }
         
@@ -991,13 +992,36 @@ public class AnalysisTransformer extends SceneTransformer {
         PatchingChain<Unit> units = body.getUnits();
         System.out.println("\n----- " + body.getMethod().getName() + "-----");
 
+        // Create a copy of deadEdges
+        Set<String[]> deadEdges = new HashSet<>(deadEdgesArg);
+
         // Iterate over the units
         for (Unit u : units) {
             System.out.println("Unit " + u.getJavaSourceStartLineNumber() + ": " + u);
             System.out.println("Type of u is " + u.getClass().getName());
             // List<Local> before = liveLocals.getLiveLocalsBefore(u);
+
+            // get deadlist from the predecessors of u if u is not the first unit
+            if(u != units.getFirst()){
+                System.out.println("Predecessors of the unit: ");
+                deadEdges = new HashSet<>();
+                for(Unit predecessor : cfg.getPredsOf(u)){
+                    System.out.println(predecessor);
+                    if(DeadEdgesListMap.containsKey(predecessor)){
+                        deadEdges.addAll(DeadEdgesListMap.get(predecessor));
+                    }
+                }
+            }
+
+            // print the dead edges
+            // System.out.println("DeadEdgesList: ");
+            // for(String[] deadEdge : deadEdges){
+            //     System.out.println(deadEdge[0] + "," + deadEdge[1] + "," + deadEdge[2]);
+            // }
             
             if(u instanceof JIdentityStmt){
+                DeadEdgesListMap.put(u, deadEdges);
+                // System.out.println("DeadEdgesList Map updated for the unit: " + u);
                 continue;
             }else if(u instanceof JAssignStmt){
 
@@ -1039,11 +1063,11 @@ public class AnalysisTransformer extends SceneTransformer {
                 Iterator<Edge> edgeIterator = cg.edgesOutOf(u);
                 
                 // Create a copy of deadEdges
-                List<String[]> deadEdgesCopy = new ArrayList<>(deadEdges);
+                Set<String[]> deadEdgesCopy = new HashSet<>(deadEdges);
 
                 while (edgeIterator.hasNext()) {
                     // Create a fresh copy of deadEdges for each iteration
-                    List<String[]> currentDeadEdgesCopy = new ArrayList<>(deadEdgesCopy);
+                    Set<String[]> currentDeadEdgesCopy = new HashSet<>(deadEdgesCopy);
                     
                     Edge edge = edgeIterator.next();
                     SootMethod calleeMethod = edge.tgt();
@@ -1057,9 +1081,6 @@ public class AnalysisTransformer extends SceneTransformer {
                     deadEdges.addAll(currentDeadEdgesCopy);
                 }
 
-                // Update deadEdges by taking the union of all changes
-                deadEdges.addAll(deadEdgesCopy);
-
             }
 
             // Assume all the locals are live before the unit
@@ -1071,8 +1092,8 @@ public class AnalysisTransformer extends SceneTransformer {
             
             List<Local> after = liveLocals.getLiveLocalsAfter(u);
             
-            System.out.println("Live locals before: " + before);
-            System.out.println("Live locals after: " + after);
+            // System.out.println("Live locals before: " + before);
+            // System.out.println("Live locals after: " + after);
 
             // OutPTG.get(u).print();
 
@@ -1141,11 +1162,25 @@ public class AnalysisTransformer extends SceneTransformer {
                 }
             }
 
-            ptg.print();
+            
+            DeadEdgesListMap.put(u, deadEdges);
+            // System.out.println("DeadEdgesList Map updated for the unit: " + u);
+            
+            // System.out.println("DeadEdgesList: ");
+            // for(String[] deadEdge : deadEdges){
+            //     System.out.println(deadEdge[0] + "," + deadEdge[1] + "," + deadEdge[2]);
+            // }
+
+            // ptg.print();
 
             System.out.println();
 
         }
+
+        // System.out.println(units.getLast());
+        // deadEdgesArg.addAll(deadEdges);
+        deadEdgesArg.addAll(DeadEdgesListMap.get(units.getLast()));
+
     }
 
     private static void getlistofMethods(SootMethod method, Set<SootMethod> reachableMethods) {

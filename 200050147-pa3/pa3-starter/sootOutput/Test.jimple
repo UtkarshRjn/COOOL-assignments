@@ -14,35 +14,18 @@ public class Test extends java.lang.Object
 
     public static void main(java.lang.String[])
     {
-        Node $r0, $r2, r5, r6;
-        java.lang.String[] r4;
+        java.lang.String[] r1;
 
-        r4 := @parameter0: java.lang.String[];
+        r1 := @parameter0: java.lang.String[];
 
-        $r0 = new Node;
+        staticinvoke <Test: Node foo()>();
 
-        specialinvoke $r0.<Node: void <init>()>();
-
-        $r2 = new Node;
-
-        specialinvoke $r2.<Node: void <init>()>();
-
-        if $r0 == null goto label1;
-
-        r5 = $r2.<Node: Node f>;
-
-        goto label2;
-
-     label1:
-        r6 = $r2.<Node: Node f>;
-
-     label2:
         return;
     }
 
     public static Node foo()
     {
-        Node $r0, $r2, r4, r5;
+        Node $r0, $r2, $r3, $r4, $r5, $r6, $r7, r11, r12, r13, r14;
 
         $r0 = new Node;
 
@@ -52,17 +35,49 @@ public class Test extends java.lang.Object
 
         specialinvoke $r2.<Node: void <init>()>();
 
-        if $r0 == null goto label1;
+        $r3 = new Node;
 
-        r4 = $r2.<Node: Node f>;
+        specialinvoke $r3.<Node: void <init>()>();
+
+        $r2.<Node: Node f> = $r3;
+
+        $r4 = new Node;
+
+        specialinvoke $r4.<Node: void <init>()>();
+
+        staticinvoke <Test: void bar(Node,Node)>($r0, $r4);
+
+        $r5 = new Node;
+
+        specialinvoke $r5.<Node: void <init>()>();
+
+        if $r4 == null goto label1;
+
+        r11 = $r5.<Node: Node f>;
+
+        $r7 = new Node;
+
+        specialinvoke $r7.<Node: void <init>()>();
+
+        r12 = $r7;
 
         goto label2;
 
      label1:
-        r5 = $r2.<Node: Node f>;
+        r13 = $r5.<Node: Node f>;
+
+        $r6 = new Node;
+
+        specialinvoke $r6.<Node: void <init>()>();
+
+        r12 = $r6;
 
      label2:
-        return $r0;
+        r14 = $r0.<Node: Node f>;
+
+        virtualinvoke r12.<Node: void goo()>();
+
+        return $r4;
     }
 
     public static void bar(Node, Node)

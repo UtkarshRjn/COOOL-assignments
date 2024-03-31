@@ -13,34 +13,25 @@ class Node /* extends Base */ {
 public class Test {
 	// public static Node global;
 	public static void main(String[] args) {
-		// Node ret = foo();
-		Node y = new Node();
-		Node z = new Node();
-		if (y != null){
-			Node a = z.f;
-			// z = new Node();
-		} else {
-			Node b = z.f;
-			// z = new Node();
-		}
+		Node ret = foo();
 	}
 	public static Node foo(){
-		// Node x = new Node();
+		Node x = new Node();
 		Node y = new Node();
-		// y.f = new Node();
-		// y = new Node();
-		// bar(x, y);
+		y.f = new Node();
+		y = new Node();
+		bar(x, y);
 
 		Node z = new Node();
 		if (y != null){
 			Node a = z.f;
-			// z = new Node();
+			z = new Node();
 		} else {
 			Node b = z.f;
-			// z = new Node();
+			z = new Node();
 		}
-		// Node a = x.f;
-		// z.goo();
+		Node a = x.f;
+		z.goo();
 		return y;
 	}
 
@@ -75,13 +66,6 @@ public class Test {
 }
 
 /* What I get
-Node:goo
-Test:bar 42:42 50:43 51:43 64:46
-Test:baz 52:53 54:54 59:54
-Test:f1
-Test:f2
-Test:foo 19:33 20:21 21:21 25:30 28:34 31:34 39:33
-Test:main 22:16
 Node:goo
 Test:bar 42:42 49:43 50:43 63:45
 Test:baz 51:52 53:53 58:53
