@@ -1,6 +1,5 @@
 public class Test extends java.lang.Object
 {
-    public static Test2Node global;
 
     public void <init>()
     {
@@ -15,66 +14,142 @@ public class Test extends java.lang.Object
 
     public static void main(java.lang.String[])
     {
-        java.lang.String[] r1;
+        Node $r0, $r2, r5, r6;
+        java.lang.String[] r4;
 
-        r1 := @parameter0: java.lang.String[];
+        r4 := @parameter0: java.lang.String[];
 
-        staticinvoke <Test: Test2Node foo()>();
+        $r0 = new Node;
+
+        specialinvoke $r0.<Node: void <init>()>();
+
+        $r2 = new Node;
+
+        specialinvoke $r2.<Node: void <init>()>();
+
+        if $r0 == null goto label1;
+
+        r5 = $r2.<Node: Node f>;
+
+        goto label2;
+
+     label1:
+        r6 = $r2.<Node: Node f>;
+
+     label2:
+        return;
+    }
+
+    public static Node foo()
+    {
+        Node $r0, $r2, r4, r5;
+
+        $r0 = new Node;
+
+        specialinvoke $r0.<Node: void <init>()>();
+
+        $r2 = new Node;
+
+        specialinvoke $r2.<Node: void <init>()>();
+
+        if $r0 == null goto label1;
+
+        r4 = $r2.<Node: Node f>;
+
+        goto label2;
+
+     label1:
+        r5 = $r2.<Node: Node f>;
+
+     label2:
+        return $r0;
+    }
+
+    public static void bar(Node, Node)
+    {
+        Node $r0, r2, $r3, r5, $r6, r7, r8;
+
+        r2 := @parameter0: Node;
+
+        r5 := @parameter1: Node;
+
+        $r0 = new Node;
+
+        specialinvoke $r0.<Node: void <init>()>();
+
+        r2.<Node: Node f> = $r0;
+
+        r7 = staticinvoke <Test: Node baz()>();
+
+        $r3 = new Node;
+
+        specialinvoke $r3.<Node: void <init>()>();
+
+        r7.<Node: Node f> = $r3;
+
+        staticinvoke <Test: Node baz()>();
+
+        r8 = staticinvoke <Test: Node f2(Node)>(r5);
+
+        $r6 = staticinvoke <Test: Node f2(Node)>(r5);
+
+        r8.<Node: Node f> = $r6;
 
         return;
     }
 
-    public static Test2Node foo()
+    public static Node baz()
     {
-        Test2Node $r0, $r2, $r8;
-        Test1A $r4;
-        Test1B $r6;
+        Node $r0, $r2, $r3, $r4, r6;
 
-        $r0 = new Test2Node;
+        $r0 = new Node;
 
-        specialinvoke $r0.<Test2Node: void <init>()>();
+        specialinvoke $r0.<Node: void <init>()>();
 
-        $r2 = new Test2Node;
+        $r2 = new Node;
 
-        specialinvoke $r2.<Test2Node: void <init>()>();
+        specialinvoke $r2.<Node: void <init>()>();
 
-        $r4 = new Test1A;
+        $r0.<Node: Node f> = $r2;
 
-        specialinvoke $r4.<Test1A: void <init>()>();
+        $r3 = new Node;
 
-        $r6 = new Test1B;
+        specialinvoke $r3.<Node: void <init>()>();
 
-        specialinvoke $r6.<Test1B: void <init>()>();
+        r6 = staticinvoke <Test: Node f1(Node)>($r3);
 
-        $r8 = new Test2Node;
+        $r4 = new Node;
 
-        specialinvoke $r8.<Test2Node: void <init>()>();
+        specialinvoke $r4.<Node: void <init>()>();
 
-        $r0.<Test2Node: Test2Node f> = $r8;
-
-        staticinvoke <Test: void bar(Test2Node,Test2Node)>($r0, $r2);
-
-        virtualinvoke $r4.<Test1A: void baz(Test2Node,Test2Node)>($r0, $r2);
-
-        virtualinvoke $r6.<Test1A: void baz(Test2Node,Test2Node)>($r0, $r2);
+        r6.<Node: Node f> = $r4;
 
         return $r0;
     }
 
-    public static void bar(Test2Node, Test2Node)
+    public static Node f1(Node)
     {
-        Test2Node $r0, r2, r3;
+        Node $r0, r2;
 
-        r2 := @parameter0: Test2Node;
+        r2 := @parameter0: Node;
 
-        r3 := @parameter1: Test2Node;
+        $r0 = new Node;
 
-        $r0 = new Test2Node;
+        specialinvoke $r0.<Node: void <init>()>();
 
-        specialinvoke $r0.<Test2Node: void <init>()>();
+        return $r0;
+    }
 
-        r2.<Test2Node: Test2Node f> = $r0;
+    public static Node f2(Node)
+    {
+        Node $r0, r2;
 
-        return;
+        r2 := @parameter0: Node;
+
+        $r0 = new Node;
+
+        specialinvoke $r0.<Node: void <init>()>();
+
+        return $r0;
     }
 }

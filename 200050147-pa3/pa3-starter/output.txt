@@ -1,8 +1,194 @@
-Soot started on Sun Mar 31 05:16:35 IST 2024
-Soot finished on Sun Mar 31 05:16:56 IST 2024
-Soot has run for 0 min. 20 sec.
-Test1A:baz 
-Test1B:baz 37:39 
-Test:bar 
-Test:foo 14:20 15:19 16:20 31:20 
-Test:main 13:10 17:10 24:10 38:10 
+Soot started on Sun Mar 31 18:12:48 IST 2024
+-----------------------------------------------------------
+Analyzing method: 0_main in class: Test
+
+----- main-----
+Unit -1: r4 := @parameter0: java.lang.String[]
+Type of u is soot.jimple.internal.JIdentityStmt
+Unit 17: $r0 = new Node
+Type of u is soot.jimple.internal.JAssignStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [$r0]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+Source Node: 0_main_$r0, Field Key: , Connected Nodes:
+- d_0_main_$r0
+- 17
+
+Unit 17: specialinvoke $r0.<Node: void <init>()>()
+Type of u is soot.jimple.internal.JInvokeStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [$r0]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+Source Node: 0_main_$r0, Field Key: , Connected Nodes:
+- d_0_main_$r0
+- 17
+
+Unit 17: r1 = $r0
+Type of u is soot.jimple.internal.JAssignStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [r1]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_$r0
+- 17
+
+Unit 18: $r2 = new Node
+Type of u is soot.jimple.internal.JAssignStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [r1, $r2]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+Source Node: 0_main_$r2, Field Key: , Connected Nodes:
+- 18
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_$r0
+- 17
+
+Unit 18: specialinvoke $r2.<Node: void <init>()>()
+Type of u is soot.jimple.internal.JInvokeStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [r1, $r2]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+Source Node: 0_main_$r2, Field Key: , Connected Nodes:
+- 18
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_$r0
+- 17
+
+Unit 18: r3 = $r2
+Type of u is soot.jimple.internal.JAssignStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [r3, r1]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+Source Node: 0_main_r3, Field Key: , Connected Nodes:
+- d_0_main_$r2
+- 18
+Source Node: 0_main_r1, Field Key: , Connected Nodes:
+- d_0_main_$r0
+- 17
+
+Unit 19: if r1 == null goto r6 = r3.<Node: Node f>
+Type of u is soot.jimple.internal.JIfStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: [r3]
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+Garbage Collected Node: 17
+
+Edges:
+Source Node: 0_main_r3, Field Key: , Connected Nodes:
+- d_0_main_$r2
+- 18
+
+Unit 20: r5 = r3.<Node: Node f>
+Type of u is soot.jimple.internal.JAssignStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: []
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+Garbage Collected Node: 18
+
+Edges:
+
+Unit 22: goto [?= return]
+Type of u is soot.jimple.internal.JGotoStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: []
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+
+Unit 23: r6 = r3.<Node: Node f>
+Type of u is soot.jimple.internal.JAssignStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: []
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+
+Unit 26: return
+Type of u is soot.jimple.internal.JReturnVoidStmt
+Live locals before: [$r0, r1, $r2, r3, r4, r5, r6, nullret]
+Live locals after: []
+d_0_main_r6
+d_0_main_$r0
+d_0_main_r1
+d_0_main_$r2
+d_0_main_r5
+d_0_main_r4
+d_0_main_r3
+
+Edges:
+
+Soot finished on Sun Mar 31 18:13:03 IST 2024
+Soot has run for 0 min. 15 sec.
+Test:main 17:19 18:20 

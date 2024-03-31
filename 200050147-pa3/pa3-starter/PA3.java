@@ -1,13 +1,6 @@
 import java.util.List;
 
 import soot.*;
-import soot.Body;
-import soot.NormalUnitPrinter;
-import soot.Scene;
-import soot.SootClass;
-import soot.SootMethod;
-import soot.Unit;
-import soot.UnitPrinter;
 import soot.toolkits.graph.ExceptionalUnitGraph;
 import soot.toolkits.graph.UnitGraph;
 import soot.jimple.internal.*;

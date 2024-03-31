@@ -1,0 +1,25 @@
+class Node extends java.lang.Object
+{
+    Node f;
+    Node g;
+
+    void <init>()
+    {
+        Node r0;
+
+        r0 := @this: Node;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void goo()
+    {
+        Node r0;
+
+        r0 := @this: Node;
+
+        return;
+    }
+}

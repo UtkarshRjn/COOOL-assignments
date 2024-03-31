@@ -299,8 +299,8 @@ class PointsToGraph {
         // print();
 
         // Process edges originating from the sourceKey
-        Map<String, List<ObjectNode>> fieldMap = edges.get(sourceKey);
-        for (Map.Entry<String, List<ObjectNode>> entry : fieldMap.entrySet()) {
+        Map<String, List<ObjectNode>> fieldMap = new HashMap<>(edges).get(sourceKey);
+        for (Map.Entry<String, List<ObjectNode>> entry : new HashMap<>(fieldMap).entrySet()) {
             String fieldKey = entry.getKey();
             List<ObjectNode> nodeList = entry.getValue();
             
@@ -346,6 +346,7 @@ class PointsToGraph {
         // Iderate over a copy of the edges map to avoid concurrent modification exception
         for (String sourceKey : new HashMap<>(edges).keySet()) {
             if (sourceKey.contains("d_")) {
+                System.out.println(sourceKey);
                 deleteEdgesFromSource(sourceKey, deadEdges, new ArrayList<>());                
             }
         }
@@ -381,11 +382,11 @@ class PointsToGraph {
     public void print() { // [Update] Removed the printing of node
 
 
-        System.out.println("Nodes:");
-        for (String nodeKey : nodes.keySet()) {
-            ObjectNode node = nodes.get(nodeKey);
-            System.out.println("Node: " + nodeKey + ", Escape: " + node.escape());
-        }
+        // System.out.println("Nodes:");
+        // for (String nodeKey : nodes.keySet()) {
+        //     ObjectNode node = nodes.get(nodeKey);
+        //     System.out.println("Node: " + nodeKey + ", Escape: " + node.escape());
+        // }
 
         System.out.println("\nEdges:");
         for (String sourceKey : edges.keySet()) {
@@ -405,7 +406,7 @@ class PointsToGraph {
 public class AnalysisTransformer extends SceneTransformer {
     static CallGraph cg;
 
-    private Map<String, List<String>> GCedObjects = new HashMap<>();
+    private Map<String, List<Map.Entry<String, Integer>>> GCedObjects = new HashMap<>();
 
     // Initalize all INs and OUTs
     Map<Unit, PointsToGraph> InPTG = new HashMap<>();
@@ -816,8 +817,8 @@ public class AnalysisTransformer extends SceneTransformer {
         String methodName = method.getName();
         String methodId = "0_" + methodName;
 
-        // System.out.println("-----------------------------------------------------------");
-        // System.out.println("Analyzing method: " + methodId + " in class: " + className);
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Analyzing method: " + methodId + " in class: " + className);
 
         Body body = method.getActiveBody();  
 
@@ -892,8 +893,8 @@ public class AnalysisTransformer extends SceneTransformer {
         String methodName = method.getName();
         String methodId = CallerLineNumber + "_" + methodName;
 
-        // System.out.println("-----------------------------------------------------------");
-        // System.out.println("Analyzing method: " + methodId + " in class: " + className);
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Analyzing method: " + methodId + " in class: " + className);
 
         Body body = method.getActiveBody();  
 
@@ -988,11 +989,12 @@ public class AnalysisTransformer extends SceneTransformer {
         LiveLocals liveLocals = new SimpleLiveLocals(cfg);
         // Units for the body
         PatchingChain<Unit> units = body.getUnits();
-        // System.out.println("\n----- " + body.getMethod().getName() + "-----");
+        System.out.println("\n----- " + body.getMethod().getName() + "-----");
 
         // Iterate over the units
         for (Unit u : units) {
-            // System.out.println("Unit " + u.getJavaSourceStartLineNumber() + ": " + u);
+            System.out.println("Unit " + u.getJavaSourceStartLineNumber() + ": " + u);
+            System.out.println("Type of u is " + u.getClass().getName());
             // List<Local> before = liveLocals.getLiveLocalsBefore(u);
             
             if(u instanceof JIdentityStmt){
@@ -1069,23 +1071,24 @@ public class AnalysisTransformer extends SceneTransformer {
             
             List<Local> after = liveLocals.getLiveLocalsAfter(u);
             
-            // System.out.println("Live locals before: " + before);
-            // System.out.println("Live locals after: " + after);
+            System.out.println("Live locals before: " + before);
+            System.out.println("Live locals after: " + after);
 
             // OutPTG.get(u).print();
 
             PointsToGraph ptg = new PointsToGraph();
             ptg.union(OutPTG.get(u)); // Here we are not making a new object take a note
 
+            // print deadEdges
+            // for(String[] deadEdge : deadEdges){
+            //     System.out.println(deadEdge[0] + "," + deadEdge[1] + "," + deadEdge[2]);
+            // }
+            
             // [THINK] delete all nodes that have dummy source
             ptg.deleteDummySource(deadEdges);
             
             // ptg.print();
             
-            // print deadEdges
-            // for(String[] deadEdge : deadEdges){
-            //     System.out.println(deadEdge[0] + "," + deadEdge[1] + "," + deadEdge[2]);
-            // }
 
             deadEdges.forEach(edge -> ptg.deleteEdge(edge[0], edge[1], edge[2]));
             
@@ -1111,17 +1114,18 @@ public class AnalysisTransformer extends SceneTransformer {
                     // System.out.println("DeadEdges after Garbage Collection: ");
                     // deadEdges.forEach(edge -> System.out.println(edge[0] + " " + edge[1] + " " + edge[2]));
 
-                    // for(ObjectNode node : GCed_nodes){
-                    //     System.out.println("Garbage Collected Node: " + node.getLine());
-                    // }
+                    for(ObjectNode node : GCed_nodes){
+                        System.out.println("Garbage Collected Node: " + node.getLine());
+                    }
 
                     // get line number of the unit u
                     int line = u.getJavaSourceStartLineNumber();
 
                     // Add the GCed nodes to the list of GCed objects
-                    List<String> GCedObjectsList = new ArrayList<>();
-                    for(ObjectNode node : GCed_nodes){
-                        GCedObjectsList.add( node.getLine() + ":" + line);
+                    List<Map.Entry<String, Integer>> GCedObjectsList = new ArrayList<>();
+                    for (ObjectNode node : GCed_nodes) {
+                        // Assuming node.getLine() returns a string and line is an integer
+                        GCedObjectsList.add(new AbstractMap.SimpleEntry<>(node.getLine(), line));
                     }
 
                     // System.out.println("GCed Objects: " + GCedObjectsList);
@@ -1137,9 +1141,9 @@ public class AnalysisTransformer extends SceneTransformer {
                 }
             }
 
-            // ptg.print();
+            ptg.print();
 
-            // System.out.println();
+            System.out.println();
 
         }
     }
@@ -1171,17 +1175,35 @@ public class AnalysisTransformer extends SceneTransformer {
         
         // Iterate through sorted keys
         for (String key : sortedKeys) {
-            List<String> GCedObjectsList = GCedObjects.get(key);
-            // Sort the list of strings
-            Collections.sort(GCedObjectsList);
+
+            List<String> GCedObjectsStringList = new ArrayList<>();
+            List<Map.Entry<String, Integer>> GCedObjectsList = GCedObjects.get(key);
             
+            // Sort the list of entries by value (integer) in descending order
+            GCedObjectsList.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
+            
+            // To keep track of unique keys
+            Set<String> usedKeys = new HashSet<>();
+                    
             // Print the key
             System.out.print(key + " ");
             
-            // Print the sorted strings in the list
-            for (String object : GCedObjectsList) {
-                System.out.print(object + " ");
+            // Print the sorted strings in the list, taking only the maximum value if there are multiple entries for a key
+            for (Map.Entry<String, Integer> entry : GCedObjectsList) {
+                if (!usedKeys.contains(entry.getKey())) { 
+                    GCedObjectsStringList.add(entry.getKey() + ":" + entry.getValue());
+                    usedKeys.add(entry.getKey());
+                }            
             }
+
+            // sort the list of string
+            Collections.sort(GCedObjectsStringList);
+
+            // Print the list of strings
+            for (String GCedObject : GCedObjectsStringList) {
+                System.out.print(GCedObject + " ");
+            }
+            
             System.out.println();
         }
     }

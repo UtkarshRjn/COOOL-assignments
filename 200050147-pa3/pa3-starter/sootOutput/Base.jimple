@@ -1,0 +1,23 @@
+class Base extends java.lang.Object
+{
+
+    void <init>()
+    {
+        Base r0;
+
+        r0 := @this: Base;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void goo()
+    {
+        Base r0;
+
+        r0 := @this: Base;
+
+        return;
+    }
+}
