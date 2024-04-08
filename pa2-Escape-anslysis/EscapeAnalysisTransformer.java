@@ -89,6 +89,15 @@ class PointsToGraph {
 
     // Given a sourceKey (Needs to be line No or param Name) and fieldKey (edge Label f,g, ""), return all the objectNodes
     public List<ObjectNode> getObjects(String sourceKey, String fieldKey) {
+        if (!edges.containsKey(sourceKey)) {
+            // Create a dummy node for the missing source key
+        
+            List<ObjectNode> dummyObjectList = new ArrayList<>();
+            dummyObjectList.add(new ObjectNode("d_" + sourceKey));
+                        
+            addEdge(sourceKey, "", dummyObjectList);
+            
+        }
         return edges.get(sourceKey).get(fieldKey);
     }
 
@@ -255,7 +264,7 @@ class PointsToGraph {
 
 public class EscapeAnalysisTransformer extends BodyTransformer {
 
-    private Map<String, List<String>> EscapingObjects = new HashMap<>();
+    private Map<String, Set<String>> EscapingObjects = new HashMap<>();
 
     private static String[] extractBaseAndField(Value expr) {
         
@@ -287,6 +296,9 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
         }else if(expr instanceof JCastExpr){
             JCastExpr castExpr = (JCastExpr) expr;
             base = castExpr.getOp().toString();
+        }else if(expr instanceof JVirtualInvokeExpr) {
+            JVirtualInvokeExpr virtualInvokeExpr = (JVirtualInvokeExpr) expr;
+            base = virtualInvokeExpr.getBase().toString();
         }
 
         return new String[]{base, field};
@@ -295,6 +307,17 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
     private static void escapeArgs(List<Value> args, PointsToGraph inPTG){
                 
         for(Value arg : args){
+
+            // Continue if arg is int or long
+            if (arg instanceof IntConstant || 
+                arg instanceof LongConstant || 
+                arg instanceof FloatConstant || 
+                arg instanceof DoubleConstant || 
+                arg instanceof StringConstant || 
+                arg instanceof NullConstant) {
+                continue;
+            }       
+            
             String[] rPair = extractBaseAndField(arg);
             String rBase = rPair[0];
             String rField = rPair[1];
@@ -331,17 +354,6 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
 
         // type of u
         // System.out.println( "Type of u is " + u.getClass().getName());
-
-        // x.f.g = y
-
-        // $r0 = x
-        // $r1 = x.f
-        // $r2 = y
-        // $r1.g = $2
-
-        // x.f = y -> 
-        // x = y.f
-        // x = y
 
         if(u instanceof JIdentityStmt){
             JIdentityStmt stmt = (JIdentityStmt) u;
@@ -482,13 +494,20 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
                }    
                 
             }else if(rhs instanceof JVirtualInvokeExpr){
-                
+
                 JVirtualInvokeExpr virtualInvokeExpr = (JVirtualInvokeExpr) rhs;
                 // System.out.println("Virtual invoke expression is " + virtualInvokeExpr);
 
                 List<Value> args = virtualInvokeExpr.getArgs();
 
                 escapeArgs(args, inPTG);
+                
+                List<ObjectNode> TargetObjectNodes = new ArrayList<>();
+                TargetObjectNodes.addAll(inPTG.getObjects(extractBaseAndField(virtualInvokeExpr)[0], ""));
+
+                for(ObjectNode targetObjectNode : TargetObjectNodes){
+                    targetObjectNode.setEscape(true);
+                }
 
                 // We let the lhs objects to escape [THINK HERE]
                 if(!lField.isEmpty()){
@@ -506,10 +525,25 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
         }else if(u instanceof JInvokeStmt){
             
             JInvokeStmt invokeStmt = (JInvokeStmt) u;
+            InvokeExpr invokeExpr = invokeStmt.getInvokeExpr();
 
             // Get the parameters of the invoke statement
-            List<Value> args = invokeStmt.getInvokeExpr().getArgs();
-            escapeArgs(args, inPTG); 
+            List<Value> args = invokeExpr.getArgs();
+            String[] rPair = extractBaseAndField(invokeExpr);
+            String rBase = rPair[0];
+
+            // Handle the case of virtual invoke (escape of this object)
+            if(!(invokeExpr instanceof JSpecialInvokeExpr)){
+                
+                escapeArgs(args, inPTG); 
+                
+                List<ObjectNode> TargetObjectNodes = new ArrayList<>();
+                TargetObjectNodes.addAll(inPTG.getObjects(rBase, ""));
+
+                for(ObjectNode targetObjectNode : TargetObjectNodes){
+                    targetObjectNode.setEscape(true);
+                }
+            }
 
         }else if(u instanceof JReturnStmt){
             
@@ -573,7 +607,7 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
         // Print the map EscapingObjects with keys and lines in lexicographic order
         for (String key : sortedKeys) {
             System.out.print(key);
-            List<String> linesSet = EscapingObjects.get(key);
+            Set<String> linesSet = EscapingObjects.get(key);
             
             // Convert set to sorted list
             List<String> sortedLines = new ArrayList<>(linesSet);
@@ -688,13 +722,14 @@ public class EscapeAnalysisTransformer extends BodyTransformer {
 
         // System.out.println("Worklist algorithm completed.");
         
-        // Peform dfs on the final OUT graph         
+        // Peform dfs on the final OUT graph 
+        
         PointsToGraph finalOutPTG = OutPTG.get(unitGraph.getTails().get(0));
         // finalOutPTG.print();
         List<ObjectNode> numericalNodes = finalOutPTG.dfs(); 
 
         // Add the escaping objects to the map
-        List<String> numericalLines = new ArrayList<>();
+        Set<String> numericalLines = new HashSet();
         for (ObjectNode node : numericalNodes) {
             numericalLines.add(node.getLine());
         }
